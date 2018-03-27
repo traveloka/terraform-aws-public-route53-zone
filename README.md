@@ -18,4 +18,4 @@ module "public-route53-hosted-zone" {
 
 ## License
 
-GNU General Public License v3.0. See LICENSE for full details.
+See LICENSE for full details.
