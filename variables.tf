@@ -1,24 +1,32 @@
-variable "name" {
+variable "tag_name" {
   type        = "string"
-  description = "name of the hosted zone"
+  description = "Name of the hosted zone"
 }
 
-variable "comment" {
+variable "tag_product_domain" {
+  type        = "string"
+  description = "Abbreviation of the product domain this Route 53 zone belongs to"
+}
+
+variable "tag_environment" {
+  type        = "string"
+  description = "Environment this Route 53 zone belongs to"
+}
+
+variable "tag_description" {
+  type        = "string"
   default     = ""
-  description = "comment for the hosted zone"
+  description = "Description of the hosted zone"
 }
 
 variable "delegation_set_id" {
+  type        = "string"
   default     = ""
-  description = "the delegation set ID whose NS records will be assigned the hosted zone"
+  description = "The delegation set ID whose NS records will be assigned the hosted zone"
 }
 
 variable "force_destroy" {
+  type        = "string"
   default     = false
-  description = "whether to destroy all records inside if the hosted zone is deleted"
-}
-
-variable "tags" {
-  default     = {}
-  description = "tag maps for the hoosted zone"
+  description = "Whether to destroy all records inside if the hosted zone is deleted"
 }
