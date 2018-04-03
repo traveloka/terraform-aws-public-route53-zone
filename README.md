@@ -2,14 +2,8 @@
 A Terraform module which creates a public AWS route53 hosted zone
 
 ## Usage
-```hcl
-module "public-route53-hosted-zone" {
-    source = "github.com/traveloka/terraform-public-route53-zone?ref=0.1.0"
-    name = "fpr.traveloka.com"
-}
 
-```
-See examples for more use cases
+See [Simple Example](examples/simple/main.tf)
 
 ## Conventions
 - tag_name will be used as the hosted zone's name
@@ -22,4 +16,4 @@ See examples for more use cases
 
 ## License
 
-See LICENSE for full details.
+See [License](LICENSE) for full details.

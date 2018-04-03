@@ -3,9 +3,9 @@ provider "aws" {
 }
 
 module "public-route53-hosted-zone" {
-  source             = "../.."
-  tag_name           = "fpr.traveloka.com"
-  tag_product_domain = "fpr"
-  tag_environment    = "production"
-  tag_description    = "Flight Product route53 hosted zone"
+  source         = "../.."
+  name           = "fpr.traveloka.com"
+  product_domain = "fpr"
+  environment    = "production"
+  description    = "Flight Product route53 hosted zone"
 }

@@ -1,21 +1,20 @@
-variable "tag_name" {
+variable "name" {
   type        = "string"
   description = "Name of the hosted zone"
 }
 
-variable "tag_product_domain" {
+variable "product_domain" {
   type        = "string"
   description = "Abbreviation of the product domain this Route 53 zone belongs to"
 }
 
-variable "tag_environment" {
+variable "environment" {
   type        = "string"
   description = "Environment this Route 53 zone belongs to"
 }
 
-variable "tag_description" {
+variable "description" {
   type        = "string"
-  default     = ""
   description = "Description of the hosted zone"
 }
 
