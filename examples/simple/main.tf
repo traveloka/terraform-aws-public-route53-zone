@@ -2,7 +2,7 @@ provider "aws" {
   region = "ap-southeast-1"
 }
 
-module "public-route53-hosted-zone" {
+module "public_route53_hosted_zone" {
   source         = "../.."
   name           = "fpr.traveloka.com"
   product_domain = "fpr"
