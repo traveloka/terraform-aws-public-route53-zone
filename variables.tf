@@ -13,11 +13,6 @@ variable "environment" {
   description = "Environment this Route 53 zone belongs to"
 }
 
-variable "description" {
-  type        = "string"
-  description = "Description of the hosted zone"
-}
-
 variable "delegation_set_id" {
   type        = "string"
   default     = ""
