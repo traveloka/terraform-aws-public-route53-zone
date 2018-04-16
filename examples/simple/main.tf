@@ -7,5 +7,4 @@ module "public-route53-hosted-zone" {
   name           = "fpr.traveloka.com"
   product_domain = "fpr"
   environment    = "production"
-  description    = "Flight Product route53 hosted zone"
 }
