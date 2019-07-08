@@ -1,5 +1,6 @@
 locals {
   description = "Public zone for ${var.name}"
+  managed_by  = "terraform"
 }
 
 resource "aws_route53_zone" "this" {
@@ -13,6 +14,6 @@ resource "aws_route53_zone" "this" {
     "ProductDomain" = "${var.product_domain}"
     "Environment"   = "${var.environment}"
     "Description"   = "${local.description}"
-    "ManagedBy"     = "Terraform"
+    "ManagedBy"     = "${local.managed_by}"
   }
 }
