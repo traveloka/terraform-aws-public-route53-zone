@@ -1,62 +1,72 @@
 # terraform-aws-public-route53-zone
 
-[![Terraform Version](https://img.shields.io/badge/Terraform%20Version->=0.11.14,_<0.12.0-blue.svg)](https://releases.hashicorp.com/terraform/)
 [![Release](https://img.shields.io/github/release/traveloka/terraform-aws-public-route53-zone.svg)](https://github.com/traveloka/terraform-aws-public-route53-zone/releases)
 [![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-public-route53-zone.svg)](https://github.com/traveloka/terraform-aws-public-route53-zone/commits/master)
-[![Issues](https://img.shields.io/github/issues/traveloka/terraform-aws-public-route53-zone.svg)](https://github.com/traveloka/terraform-aws-public-route53-zone/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/traveloka/terraform-aws-public-route53-zone.svg)](https://github.com/traveloka/terraform-aws-public-route53-zone/pulls)
-[![License](https://img.shields.io/github/license/traveloka/terraform-aws-public-route53-zone.svg)](https://github.com/traveloka/terraform-aws-public-route53-zone/blob/master/LICENSE)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
+
+## Description
+
+Terraform module to create a public Route53 hosted zone
 
 ## Table of Content
 
+- [Description](#Description)
 - [Prerequisites](#Prerequisites)
-- [Quick Start](#Quick-Start)
 - [Dependencies](#Dependencies)
+- [Terraform Versions](#Terraform%20Versions)
+- [Terraform Providers](#Terraform%20Providers)
+- [Getting Started](#Getting_Started)
+- [Inputs](#Inputs)
+- [Outputs](#Outputs)
 - [Contributing](#Contributing)
-- [Contributor](#Contributor)
 - [License](#License)
 - [Acknowledgments](#Acknowledgments)
 
 ## Prerequisites
 
-- [Terraform](https://releases.hashicorp.com/terraform/). This module currently tested on `0.11.14`
+This module doesn't have any existing resource requirements
 
-## Quick Start
-A Terraform module which creates a public AWS route53 hosted zone
+## Dependencies
 
-### Examples
+Doesn't have any dependencies to any other Terraform module
 
-* [Simple Example](https://github.com/traveloka/terraform-aws-public-route53-zone/tree/master/examples/simple)
+## Terraform Versions
 
-## Providers
+Created and tested using Terraform version `0.11.14`
+
+## Terraform Providers
 
 | Name | Version |
-|------|---------|
-| aws | n/a |
+| ---- | ------- |
+| aws  | ~> 2.49 |
+
+## Getting Started
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| name | Name of the hosted zone. | `string` | n/a | yes |
-| product_domain | Abbreviation of the product domain this Route 53 zone belongs to. | `string` | n/a | yes |
-| environment | Environment this Route 53 zone belongs to. | `string` | n/a | yes |
-| delegation_set_id | The delegation set ID whose NS records will be assigned the hosted zone. | `string` | n/a | no |
-| force_destroy | Whether to destroy all records inside if the hosted zone is deleted. | `string` | `false` | no |
+| delegation\_set\_id | The delegation set ID whose NS records will be assigned the hosted zone | `string` | `""` | no |
+| environment | Environment this Route 53 zone belongs to | `string` | n/a | yes |
+| force\_destroy | Whether to destroy all records inside if the hosted zone is deleted | `string` | `false` | no |
+| name | Name of the hosted zone | `string` | n/a | yes |
+| product\_domain | Abbreviation of the product domain this Route 53 zone belongs to | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| zone_id | The hosted zone id. |
-| name_servers | A list of name servers in associated (or default) delegation set. |
+| name\_servers | A list of name servers in associated (or default) delegation set |
+| zone\_id | The hosted zone id |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+This module accepting or open for any contributions from anyone, please see the [CONTRIBUTING.md](https://github.com/traveloka/terraform-aws-public-route53-zone/blob/master/CONTRIBUTING.md) for more detail about how to contribute to this module.
 
 ## License
 
-Apache 2 Licensed. See LICENSE for full details.
-
+This module is under Apache License 2.0 - see the [LICENSE](https://github.com/traveloka/terraform-aws-public-route53-zone/blob/master/LICENSE) file for details.
